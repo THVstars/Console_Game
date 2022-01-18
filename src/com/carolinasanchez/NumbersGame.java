@@ -13,6 +13,7 @@ public class NumbersGame {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter 1 to start the game or 2 to stop the game:");
         int digit = scanner.nextInt();
         int sum = 0;
         Random number = new Random();
@@ -21,11 +22,12 @@ public class NumbersGame {
         while (digit == 1) {
             sum += number.nextInt(largestNumber); // This generates numbers from 0 to largestNumber-1 (50).
             System.out.println(sum);
+            System.out.println("Please enter 1 to continue the game or 2 to stop the game:");
             digit = scanner.nextInt();
         }
 
-        if (digit == 2) {
+        /* if (digit == 2) {
             scanner.close();
-        }
+        } */ // THIS ISN'T NECESSARY. THE PROGRAM ALREADY EXITS THE CONSOLE WHEN ANY NUMBER OTHER THAN 1 IS ENTERED!
     }
 }
